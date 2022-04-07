@@ -19,7 +19,7 @@ function App() {
        <Route path="/characters" element={<Characters/>}/>
        <Route path="/characters/:id" element={<CharacterDetails/>}/>
        <Route path="/houses" element={<Houses/>}/>
-       <Route path="/houses/:id" element={<HouseDetails/>}/>
+       <Route path="/houses/:name" element={<HouseDetails/>}/>
        <Route path="/cronology" element={<Cronology/>}/>
 
 

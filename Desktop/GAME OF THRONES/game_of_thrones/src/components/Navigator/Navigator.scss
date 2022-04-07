@@ -1,17 +1,20 @@
 .c-nav {
-  width: 100vw;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  
+  width: 100vw;
+  
   text-decoration: none;
+  
   position: absolute;
   bottom: 0px;
   padding-bottom: 80px;
 
   a {
     color: white;
-    font-size: 40px;
+    font-size: 30px;
   }
 }

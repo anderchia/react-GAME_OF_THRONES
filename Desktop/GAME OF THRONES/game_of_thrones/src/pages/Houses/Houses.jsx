@@ -1,9 +1,32 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import CardHouse from '../../components/CardHouse/CardHouse'
 
-function Houses() {
-  return (
-    <div>Houses</div>
+export default function Houses() {
+  const [houses, setHouses] = useState([])
+
+  useEffect(() => {
+    const getHouses = async () => {
+      const res= await axios.get("https://api.got.show/api/show/houses");
+    
+      console.log(res.data);
+      setHouses(res.data)
+    
+    }
+    getHouses();
+  }, [])
+
+  console.log(houses) 
+
+
+    return (
+      <div>
+      {houses.map((house) => (
+        <CardHouse house={house}/>
+      ))}
+   </div>
   )
 }
 
-export default Houses
+
+
