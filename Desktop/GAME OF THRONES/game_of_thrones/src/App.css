@@ -11,3 +11,13 @@ a{
  text-decoration: none;
 
 }
+
+body {
+  font-family: 'GoT';
+}
+
+@font-face {
+  font-family: 'GoT';
+  src: url("/public/fonts/Game of Thrones.ttf");
+}
+

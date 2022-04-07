@@ -1,23 +1,34 @@
-body{
-
+.p-background{
  background-image: url("../../../public/images/imageHome.png");
  background-size: cover;
  background-position: center;
+
  height: 100vh;
- 
-  
+
 }
+
 .p-homeTitle{
-  width: 50%;  
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: white;
-  font-size: 80px;
+  font-size: 70px;
 
 }
+
 .p-h1Title{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+
+    width: 50%;
+    margin: 10vh auto;
+    
+
+  
+   
+
+
 }
