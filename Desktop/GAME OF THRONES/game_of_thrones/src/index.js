@@ -22,6 +22,9 @@ if (locale==="es") {
 =======
 import reportWebVitals from './reportWebVitals';
 import './contexts/i18n';
+<<<<<<< HEAD
+>>>>>>> f373c0ebf2729d1ea9805d3b9774cba85bf81d6c
+=======
 >>>>>>> f373c0ebf2729d1ea9805d3b9774cba85bf81d6c
 
 ReactDOM.render(

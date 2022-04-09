@@ -13,16 +13,16 @@ export default function Navigator() {
   return (
     <>
         <div className='b-buttons'>
-
+         
           {Object.keys(lngs).map((lng) => (
             <button key={lng} className="b-buttonNav" style={{ backgroundImage:  i18n.resolvedLanguage === lng ? '../../../public/images/spanish.jpg' : '../../../public/images/Bandera-de-Reino-Unido.png' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
               {lngs[lng].nativeName}
             </button>
-
+            
           ))}
           </div>
-
-
+       
+        
      <ul className='c-nav'>
         <Link to ="/characters">{t('description.part1')}
         </Link> 
@@ -33,3 +33,4 @@ export default function Navigator() {
    </> 
   )
 }
+

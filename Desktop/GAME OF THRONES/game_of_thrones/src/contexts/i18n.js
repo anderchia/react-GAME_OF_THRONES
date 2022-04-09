@@ -24,6 +24,7 @@ i18n
              part2: 'CASAS',
              part3: 'CRONOLOGÍA'
          }
+         
         }
       },
       en: {
@@ -39,3 +40,5 @@ i18n
 
     }
   });
+         
+export default i18n;
