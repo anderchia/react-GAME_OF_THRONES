@@ -18,3 +18,27 @@
     font-size: 30px;
   }
 }
+.b-buttons{
+
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: flex-end;
+  padding: 10px;
+  margin-right: 20px;
+  background-color: transparent;
+
+}
+
+
+.b-buttonNav{
+  position: relative;
+  height: 40px;
+  min-width: 80px;
+  //background-image: url("../../../public/images/español.png");
+  //url("../../../public/images/imageHome.png")
+
+//background-color: red;
+
+ 
+}
