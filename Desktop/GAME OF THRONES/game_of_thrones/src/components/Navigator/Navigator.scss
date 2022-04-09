@@ -24,21 +24,25 @@
   flex-direction: row;
   gap: 30px;
   justify-content: flex-end;
-  padding: 10px;
   margin-right: 20px;
-  background-color: transparent;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 
 }
 
 
 .b-buttonNav{
   position: relative;
+  z-index: 1;
   height: 40px;
   min-width: 80px;
-  //background-image: url("../../../public/images/español.png");
-  //url("../../../public/images/imageHome.png")
+}
 
-//background-color: red;
-
- 
+.b-imagenHome {
+  position: relative;
+  z-index: 1;
+  height: 40px;
+  width: 40px;
+  background-color: white;
 }
