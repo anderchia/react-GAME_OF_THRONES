@@ -1,14 +1,17 @@
-import React from 'react'
+import React from "react";
+import { Link, generatePath } from "react-router-dom";
 
-export default function CardCharacter({character}) {
+export default function CardCharacter({ character }) {
   return (
-    <figure>
-    <div>
-    <img src={character.image} alt="{character.name}"/>
-    <h2>{character.name}</h2>
-    </div>
-  </figure>
-   )
+    <Link to={generatePath("/characters/:name", { name: character.name })}>
+      {character.image && (
+        <figure>
+          <div>
+            <img src={character.image} alt={character.name} />
+            <h2>{character.name}</h2>
+          </div>
+        </figure>
+      )}
+    </Link>
+  );
 }
-
-

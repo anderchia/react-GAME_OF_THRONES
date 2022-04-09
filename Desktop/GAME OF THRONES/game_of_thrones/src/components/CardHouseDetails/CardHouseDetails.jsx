@@ -1,35 +1,37 @@
 import React from "react";
+import "./CardHouseDetails.scss";
 
 export default function CardHouseDetails({ house }) {
   return (
     <section>
       <figure>
-        <div>
-          <img src="{house.imageURL}" alt="" />
+        <div className="b-detail">
+          <img src={house.logoURL} alt="" />
           <h2>{house.name}</h2>
         </div>
       </figure>
 
-      <figure>
-        <div>
+      <figure className="b-boxdetail">
+        <div className="b-boxdetaiddetail">
           <h3>LEMA</h3>
-          <p>{house.words}</p>
+          <p className="b-tipo">{house.words}</p>
         </div>
         <div>
           <h3>SEDE</h3>
-          <p>{house.seat}</p>
+          <p className="b-tipo">{house.seat}</p>
         </div>
         <div>
           <h3>REGION</h3>
-          <p>{house.region}</p>
+          <p className="b-tipo">{house.region}</p>
         </div>
         <div>
           <h3>ALIANZAS</h3>
-          <p>{house.allegiance}</p>
+          <p className="b-tipo">{house.allegiance}</p>
+      
         </div>
         <div>
           <h3>FUNDACION</h3>
-          <p>{house.createdAt}</p>
+          <p className="b-tipo">{house.createdAt}</p>
         </div>
       </figure>
     </section>

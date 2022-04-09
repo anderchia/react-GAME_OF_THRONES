@@ -23,7 +23,7 @@ export default function Characters() {
       return (
         <div>
         {characters.map((character) => (
-          <CardCharacter character={character}/>
+          <CardCharacter key={character.id} character={character}/>
         ))}
      </div>
     )

@@ -22,7 +22,7 @@ export default function Houses() {
     return (
       <div>
       {houses.map((house) => (
-        <CardHouse house={house}/>
+        <CardHouse key={house.id} house={house}/>
       ))}
    </div>
   )

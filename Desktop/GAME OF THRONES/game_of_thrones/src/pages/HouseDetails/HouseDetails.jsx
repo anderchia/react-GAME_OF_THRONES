@@ -17,7 +17,7 @@ export default function HouseDetails() {
     const getHouse = async () => {
       const res= await axios.get(`${url}/${name}`)
       console.log(res.data)
-      setHouseDetail(res.data)
+      setHouseDetail(res.data[0])
     }
     getHouse();
  
