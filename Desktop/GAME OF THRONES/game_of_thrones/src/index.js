@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import App from './App';
+<<<<<<< HEAD
 import { createRoot } from 'react-dom/client';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -18,6 +19,10 @@ if (locale==="es") {
        lang = English;
      }
 }
+=======
+import reportWebVitals from './reportWebVitals';
+import './contexts/i18n';
+>>>>>>> f373c0ebf2729d1ea9805d3b9774cba85bf81d6c
 
 ReactDOM.render(
    <IntlProvider locale ={locale} messages={Spanish}>

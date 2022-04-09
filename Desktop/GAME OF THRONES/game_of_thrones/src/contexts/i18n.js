@@ -24,7 +24,6 @@ i18n
              part2: 'CASAS',
              part3: 'CRONOLOGÍA'
          }
-
         }
       },
       en: {
