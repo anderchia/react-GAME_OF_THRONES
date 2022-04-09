@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './Navigator.scss';
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 
 const lngs = {
   es: { nativeName: 'Spanish' },
@@ -15,7 +15,7 @@ export default function Navigator() {
         <div className='b-buttons'>
          
           {Object.keys(lngs).map((lng) => (
-            <button key={lng} className="b-buttonNav" style={{ backgroundImage:  i18n.resolvedLanguage === lng ? '../../../public/images/spanish.jpg' : '../../../public/images/Bandera-de-Reino-Unido.png' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+            <button key={lng} className="b-buttonNav" style={{ backgroundImage:  i18n.resolvedLanguage === lng ? URL('../../../public/images/spanish.jpg') : URL('../../../public/images/Bandera-de-Reino-Unido.png')}} type="submit" onClick={() => i18n.changeLanguage(lng)}>
               {lngs[lng].nativeName}
             </button>
             
