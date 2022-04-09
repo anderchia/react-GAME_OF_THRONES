@@ -34,11 +34,11 @@ i18n
              part2: 'HOUSES',
              part3: 'CRONOLOGY'
          }
-         
+
         }
       }
-     
+
     }
   });
-
+         
 export default i18n;

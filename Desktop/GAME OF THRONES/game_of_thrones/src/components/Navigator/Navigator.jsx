@@ -11,11 +11,15 @@ const lngs = {
 export default function Navigator() {
   const { t, i18n } = useTranslation();
   return (
-    <>
+    <>  
         <div className='b-buttons'>
-         
+
+        <Link to="/" className="b-imagenHome"  >
+        <img  src="../../../public/images/imageHome.png" alt=""></img>
+        </Link>
+
           {Object.keys(lngs).map((lng) => (
-            <button key={lng} className="b-buttonNav" style={{ backgroundImage:  i18n.resolvedLanguage === lng ? URL('../../../public/images/spanish.jpg') : URL('../../../public/images/Bandera-de-Reino-Unido.png')}} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+            <button key={lng} className="b-buttonNav" style={{ backgroundImage:  i18n.resolvedLanguage === lng ? {url:'../../../public/images/spanish.jpg'} : {url:'../../../public/images/Bandera-de-Reino-Unido.png'} }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
               {lngs[lng].nativeName}
             </button>
             

@@ -5,15 +5,22 @@
 
  height: 100vh;
 
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+
 }
 
 .p-homeTitle{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  margin-top: -100px;
 
   color: white;
-  font-size: 70px;
+  font-size: 80px;
 
 }
 
@@ -24,7 +31,8 @@
     flex-direction: column;
 
     width: 50%;
-    margin: 10vh auto;
+    // margin: 20vh auto;
+  
     
 
   

@@ -10,9 +10,13 @@ import HouseDetails from './pages/HouseDetails/HouseDetails';
 import Houses from './pages/Houses/Houses';
 
 
-function App() {
+
+
+function App() {  
+  
   return (
     <Router>
+    
      <Navigator/>
      <Routes>
        <Route path="/" element={<Home/>}/>

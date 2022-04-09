@@ -9,6 +9,10 @@
     "axios": "^0.26.1",
     "i18next": "^21.6.14",
     "i18next-browser-languagedetector": "^6.1.4",
+
+    "locize": "^2.2.5",
+    "locize-lastused": "^3.0.13",
+
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-hook-form": "^7.29.0",
