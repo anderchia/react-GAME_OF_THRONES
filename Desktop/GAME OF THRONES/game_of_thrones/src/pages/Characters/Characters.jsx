@@ -5,7 +5,8 @@ import Search from '../../components/Search/Search'
 
 
 export default function Characters() {
-    const [characters, setCharacters] = useState([])
+    const [characters, setCharacters] = useState([]);
+   
  
     const getCharacters = async (characterName = "") => {
         const res= await axios.get(`https://api.got.show/api/show/characters/${characterName}`);
@@ -18,20 +19,15 @@ export default function Characters() {
     useEffect(() => {
       getCharacters();
     }, [])
-  
+
     console.log(characters) 
   
   
       return (
         <div>
         <div>
-        <Search
-          onSubmit={(data) =>
-            getCharacters(
-              data.name.length !== 0 ? data.name : ""
-            )
-          }
-        />
+        <Search/>
+         
       </div>
         <div>
         {characters.map((character) => (
