@@ -1,41 +1,36 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import CardCharacter from '../../components/CardCharacter/CardCharacter'
-import Search from '../../components/Search/Search'
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import CardCharacter from "../../components/CardCharacter/CardCharacter";
+import Search from "../../components/Search/Search";
 
 export default function Characters() {
-    const [characters, setCharacters] = useState([]);
-   
- 
-    const getCharacters = async (characterName = "") => {
-        const res= await axios.get(`https://api.got.show/api/show/characters/${characterName}`);
-      
-        console.log(res.data);
-        setCharacters(res.data)
-      
-      }
+  const [characters, setCharacters] = useState([]); //traer contexto para que no choque con la búsqueda
 
-    useEffect(() => {
-      getCharacters();
-    }, [])
+  const getCharacters = async (characterName = "") => {
+    const res = await axios.get(
+      `https://api.got.show/api/show/characters/${characterName}`
+    );
 
-    console.log(characters) 
-  
-  
-      return (
-        <div>
-        <div>
-        <Search/>
-         
+    console.log(res.data);
+    setCharacters(res.data);
+  };
+
+  useEffect(() => {
+    getCharacters();
+  }, []);
+
+  console.log(characters);
+
+  return (
+    <div>
+      <div>
+        <Search />
       </div>
-        <div>
+      <div>
         {characters.map((character) => (
-          <CardCharacter key={character.id} character={character}/>
+          <CardCharacter key={character.id} character={character} />
         ))}
-     </div>
-     </div>
-    )
-  }
-  
-  
+      </div>
+    </div>
+  );
+}

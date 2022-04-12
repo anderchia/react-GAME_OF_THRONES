@@ -4,14 +4,12 @@ import React from 'react'
 
 
 export default function Cronology({characters}) {
-    
-
+ 
       return (
        
         <ul>
-          {characters.filter(character => character.age && character.age.age)
-            .sort((prev, next) => prev.age.age - next.age.age)
-            .map(character => (
+          {characters.filter((character) => character.age && character.age.age)
+             .map(character => (
               <li key={character.id}>
              
               <p>{character.age.age}</p>
