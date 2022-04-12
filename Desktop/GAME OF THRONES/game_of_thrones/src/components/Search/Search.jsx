@@ -1,20 +1,16 @@
 
-import { useContext, useState } from "react";
-import { GoTocontext } from "../../contexts/GoTcontext";
-
-
-
-
+import useState, { useContext }  from "react";
+import { GoTcontext } from "../../contexts/GoTcontext";
 
 
 export default function Search(){
     const [ busqueda, setBusqueda ] = useState("");
-    const [ characters, setCharacters ] = useContext(GoTocontext);
+    const { characters, setCharacters } = useContext(GoTcontext);
   
     const handleChange=e=>{
         setBusqueda(e.target.value);
       filtrar(e.target.value);
-
+setCharacters([])
         }
     const filtrar = (terminoBusqueda)=>{
 
@@ -39,3 +35,5 @@ export default function Search(){
     )
   
 }
+
+
