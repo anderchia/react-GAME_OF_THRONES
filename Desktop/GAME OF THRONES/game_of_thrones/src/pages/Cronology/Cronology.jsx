@@ -1,65 +1,50 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import './Cronology.scss'
-import Cronologyasc from '../../components/Cronologies/Cronologyasc'
-import Cronologydesc from '../../components/Cronologies/Cronologydesc'
-
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "./Cronology.scss";
+import Cronologyasc from "../../components/Cronologies/Cronologyasc";
 
 
 export default function Cronology() {
-    const [characters, setCharacters] = useState([])
-  
-    const getCharacters = async () => {
-        const res= await axios.get(`https://api.got.show/api/show/characters/`);
-      
-        console.log(res.data);
-        setCharacters(res.data)
-      
-      }
+  const [characters, setCharacters] = useState([]);
 
-  
-    useEffect(() => {
-      getCharacters();
-    }, [])
-  
-    console.log(characters) 
+  const getCharacters = async () => {
+    const res = await axios.get(`https://api.got.show/api/show/characters/`);
 
-        // document.getElementById('asc').onclick = () => {
-        //   const ascList = characters.filter(character=> character.age.age).sort((prev, next) => {
-        //     return prev.age.age - next.age.age;
-        //   });
-          
-        //   characters(ascList);
-        // }
+    console.log(res.data);
+    setCharacters(res.data);
+    // nada me asegura que characters ya este guardado
+    filterChar(res.data);
+  };
+
+  const filterChar = (chars) => {
+    setShowCronology(!showCronology);
+    const charFilter=chars
+      .filter((character) => character.age && character.age.age)
+      .sort((prev, next) => {
+        return showCronology
+        ? next.age.age - prev.age.age
+        : prev.age.age - next.age.age
+      });
+    setCharacters(charFilter);
+  };
+
+  useEffect(() => {
+    getCharacters();
    
-        const [showCronology, setShowCronology] = useState(true);
-       
+  }, []);
 
-      return (
-        <div>
-        
-        <button id="asc" onClick={() => setShowCronology(true)}>Ascending</button>
-        <button id="asc" onClick={() => setShowCronology(false)}>Descending</button>
-        {showCronology ? (
-          <Cronologyasc characters={characters}/>
-        ) : (
-          <Cronologydesc characters={characters}/>
-        )}
-      
-        <ul>
-          {characters.filter(character => character.age && character.age.age)
-            .sort((prev, next) => prev.age.age - next.age.age)
-            .map(character => (
-              <li key={character.id}>
-             
-              <p>{character.age.age}</p>
-              <p>{character.age.name}</p>
-                 {character.image && <img src={character.image} alt="personajes" ></img>} 
-          
-              </li>
-            ))}
-        </ul>
-      </div>
-    )
-  }
+  console.log(characters);
+ 
+
+  const [showCronology, setShowCronology] = useState(false);
+
+  return (
+    <div>
+      <button id="asc" onClick={() => filterChar(characters)}>asc
+      </button>
+
+        <Cronologyasc characters={characters} />
+   
+    </div>
+  );
+}

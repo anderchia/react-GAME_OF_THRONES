@@ -4,8 +4,8 @@ import './Navigator.scss';
 import { useTranslation} from 'react-i18next';
 
 const lngs = {
-  es: { nativeName: 'Spanish' },
-  en: { nativeName: 'English' }
+  es: { nativeName: 'spanish' },
+  en: { nativeName: 'english' }
 };
 
 export default function Navigator() {
@@ -15,12 +15,12 @@ export default function Navigator() {
         <div className='b-buttons'>
 
         <Link to="/" className="b-imagenHome"  >
-        <img  src="../../../public/images/imageHome.png" alt=""></img>
+        <img  src="/images/house.jpg" alt=""></img>
         </Link>
 
           {Object.keys(lngs).map((lng) => (
-            <button key={lng} className="b-buttonNav" style={{ backgroundImage:  i18n.resolvedLanguage === lng ? {url:'../../../public/images/spanish.jpg'} : {url:'../../../public/images/Bandera-de-Reino-Unido.png'} }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
-              {lngs[lng].nativeName}
+             <button key={lng} className="b-buttonNav" style={{ backgroundImage: "url(/images/"+lng+".jpg)" }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+              
             </button>
             
           ))}
