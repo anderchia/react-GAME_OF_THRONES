@@ -1,23 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useContext } from 'react'
 import CardHouse from '../../components/CardHouse/CardHouse'
+import { GoTcontext } from '../../contexts/GoTcontext'
 
 export default function Houses() {
-  const [houses, setHouses] = useState([])
-
-  useEffect(() => {
-    const getHouses = async () => {
-      const res= await axios.get("https://api.got.show/api/show/houses");
-    
-      console.log(res.data);
-      setHouses(res.data)
-    
-    }
-    getHouses();
-  }, [])
-
-  console.log(houses) 
-
+  const {houses} = useContext(GoTcontext)
 
     return (
       <div>

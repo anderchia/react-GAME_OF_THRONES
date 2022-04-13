@@ -28,11 +28,10 @@ export default function Navigator() {
        
         
      <ul className='c-nav'>
-        <Link to ="/characters">{t('description.part1')}
-        </Link> 
-        <Link to ="/houses">
+        <Link className="underline" to ="/characters">{t('description.part1')}</Link> 
+        <Link className="underline" to ="/houses">
         {t('description.part2')}</Link> 
-        <Link to ="/cronology">{t('description.part3')}</Link> 
+        <Link className="underline" to ="/cronology">{t('description.part3')}</Link> 
      </ul>
    </> 
   )

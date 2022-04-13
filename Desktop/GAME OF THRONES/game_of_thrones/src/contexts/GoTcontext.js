@@ -6,12 +6,12 @@ export const GoTcontext = createContext();
 
 export const GoTcontextProvider = ({ children }) => {
   const [houses, setHouses] = useState([]);
-
   const [characters, setCharacters] = useState([]);
+  const url = 'https://api.got.show/api/show/characters/'
 
   useEffect(() => {
-    const fetchCharacters = async () => {
-      const res = await axios.get("https://api.got.show/api/show/characters/");
+    const fetchCharacters = async (name="") => {
+      const res = await axios.get(`${url}/${name}`);
 
       setCharacters(res.data);
     };
@@ -31,7 +31,7 @@ export const GoTcontextProvider = ({ children }) => {
   
   return (
     <GoTcontext.Provider
-      value={{ houses, setHouses, setCharacters, characters }}
+      value={{ houses, setHouses,  characters, setCharacters }}
     >
       {children}
     </GoTcontext.Provider>
