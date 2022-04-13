@@ -1,36 +1,41 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useEffect, useState } from "react";
 import CardCharacter from "../../components/CardCharacter/CardCharacter";
+// import { GoTcontext } from "../../contexts/GoTcontext";
 import Search from "../../components/Search/Search";
+import axios from "axios";
+
+
 
 export default function Characters() {
-  const [characters, setCharacters] = useState([]); //traer contexto para que no choque con la búsqueda
+  // const {characters, setCharacters, fetchCharacters} = useContext(GoTcontext); //traer contexto para que no choque con la búsqueda
+  const url = 'https://api.got.show/api/show/characters/'
+  const [characters, setCharacters] = useState([]);
+  
+    const fetchCharacters = async (name="") => {
+      const res = await axios.get(`${url}/${name}`);
 
-  const getCharacters = async (characterName = "") => {
-    const res = await axios.get(
-      `https://api.got.show/api/show/characters/${characterName}`
-    );
+      setCharacters(res.data);
+    };
 
-    console.log(res.data);
-    setCharacters(res.data);
-  };
-
-  useEffect(() => {
-    getCharacters();
+useEffect(() => {
+    fetchCharacters();
   }, []);
 
-  console.log(characters);
+  console.log("me ejecuto muchoo");
 
   return (
     <div>
       <div>
-        <Search />
+        <Search onSubmit={(data)=> fetchCharacters(data.data.name.length !== 0 ? data.data.name : ""
+            )}/>
       </div>
+     
       <div>
         {characters.map((character) => (
           <CardCharacter key={character.id} character={character} />
         ))}
       </div>
+     
     </div>
   );
 }

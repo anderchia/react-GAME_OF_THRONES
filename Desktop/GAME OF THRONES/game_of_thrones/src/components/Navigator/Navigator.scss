@@ -12,6 +12,13 @@
   position: absolute;
   bottom: 0px;
   padding-bottom: 80px;
+  
+  .underline{
+  &:hover {
+    border-bottom: 1px solid white;
+    margin-bottom: 1px;
+  }
+}
 
   a {
     color: white;
@@ -29,6 +36,7 @@
   right: 20px;
   top: 20px;
 
+  
 }
 
 
