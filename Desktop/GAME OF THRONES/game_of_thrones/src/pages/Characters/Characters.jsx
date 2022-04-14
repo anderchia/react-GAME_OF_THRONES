@@ -3,6 +3,7 @@ import CardCharacter from "../../components/CardCharacter/CardCharacter";
 // import { GoTcontext } from "../../contexts/GoTcontext";
 import Search from "../../components/Search/Search";
 import axios from "axios";
+import "./Characters.scss"
 
 
 
@@ -24,13 +25,14 @@ useEffect(() => {
   console.log("me ejecuto muchoo");
 
   return (
-    <div>
+    <div className="cajaGrande">
       <div>
-        <Search onSubmit={(data)=> fetchCharacters(data.data.name.length !== 0 ? data.data.name : ""
+      
+        <Search onSubmit={(data)=> fetchCharacters(data.data.name 
             )}/>
       </div>
      
-      <div>
+      <div className="timeline-container" >
         {characters.map((character) => (
           <CardCharacter key={character.id} character={character} />
         ))}
