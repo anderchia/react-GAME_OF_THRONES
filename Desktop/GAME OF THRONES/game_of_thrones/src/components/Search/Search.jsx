@@ -1,11 +1,10 @@
 import { useForm } from "react-hook-form";
 
-export default function Search({ onSubmit }) {
+export default function Search({onSubmit}) {
   const { register, handleSubmit } = useForm();
-
-  return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("name")} type="text" />
+ 
+  return (<form onSubmit={handleSubmit(onSubmit)}>
+      <input {...register("title")} type="text" />
     </form>
   );
 }
