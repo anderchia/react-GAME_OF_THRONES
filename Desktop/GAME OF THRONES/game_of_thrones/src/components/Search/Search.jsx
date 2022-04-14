@@ -1,10 +1,11 @@
 import { useForm } from "react-hook-form";
+import "./Search.scss"
 
 export default function Search({onSubmit}) {
   const { register, handleSubmit } = useForm();
  
   return (<form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("title")} type="text" />
+      <input className="buscador" {...register("title")} type="text" placeholder="🔎 Buscar..."/>
     </form>
   );
 }

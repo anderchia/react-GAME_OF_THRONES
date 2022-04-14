@@ -14,9 +14,9 @@ export default function Navigator() {
     <>  
         <div className='b-buttons'>
 
-        <Link to="/" className="b-imagenHome"  >
+        {/* <Link to="/" className="b-imagenHome"  >
         <img  src="/images/house.jpg" alt=""></img>
-        </Link>
+        </Link> */}
 
           {Object.keys(lngs).map((lng) => (
              <button key={lng} className="b-buttonNav" style={{ backgroundImage: "url(/images/"+lng+".jpg)" }} type="submit" onClick={() => i18n.changeLanguage(lng)}>

@@ -4,6 +4,8 @@ import CardCharacter from "../../components/CardCharacter/CardCharacter";
 import Search from "../../components/Search/Search";
 import axios from "axios";
 import "./Characters.scss";
+import Casa from "../../components/Casa/Casa";
+
 
 export default function Characters() {
   // const {characters, setCharacters, fetchCharacters} = useContext(GoTcontext); //traer contexto para que no choque con la búsqueda
@@ -25,6 +27,8 @@ export default function Characters() {
     setCharacters([res.data]);
   };
 
+
+
   useEffect(() => {
     fetchCharacters();
   }, []);
@@ -36,6 +40,10 @@ export default function Characters() {
       <div>
         <Search onSubmit={(data) => searchCharacter(data.title)} />
       </div>
+      <div>
+        <Casa/>
+      </div>
+      
 
       <div className="timeline-container">
         {characters.map((character) => (
@@ -45,3 +53,4 @@ export default function Characters() {
     </div>
   );
 }
+
