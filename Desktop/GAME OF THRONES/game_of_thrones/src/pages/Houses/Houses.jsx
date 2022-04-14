@@ -6,10 +6,12 @@ export default function Houses() {
   const {houses} = useContext(GoTcontext)
 
     return (
-      <div>
+      <div className="cajaGrande">
+      <div className="timeline-container">
       {houses.map((house) => (
         <CardHouse key={house.id} house={house}/>
       ))}
+   </div>
    </div>
   )
 }

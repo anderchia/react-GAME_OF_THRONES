@@ -2,3 +2,52 @@ body{
     background-color: black;
 }
 
+.caja {
+    width: 250px;
+    position: relative;
+    height: 350px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+.imagen{
+    width: 100%;
+    height: 350px;
+
+
+}
+
+.fondoNombre {
+      position: absolute;
+    // top: 0;
+    bottom: 0;
+    // left: 3;
+    // right: 3;
+    background: rgba(0, 0, 0, 0.269);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    width: 250px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+
+
+
+  .caja:hover .fondoNombre {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .nombre{
+      margin-top: 30px;
+
+  }

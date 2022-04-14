@@ -32,7 +32,7 @@ useEffect(() => {
             )}/>
       </div>
      
-      <div className="timeline-container" >
+      <div className="timeline-container">
         {characters.map((character) => (
           <CardCharacter key={character.id} character={character} />
         ))}
