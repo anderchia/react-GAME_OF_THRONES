@@ -3,22 +3,29 @@ import CardCharacter from "../../components/CardCharacter/CardCharacter";
 // import { GoTcontext } from "../../contexts/GoTcontext";
 import Search from "../../components/Search/Search";
 import axios from "axios";
-import "./Characters.scss"
-
-
+import "./Characters.scss";
 
 export default function Characters() {
   // const {characters, setCharacters, fetchCharacters} = useContext(GoTcontext); //traer contexto para que no choque con la búsqueda
-  const url = 'https://api.got.show/api/show/characters/'
+  const url = "https://api.got.show/api/show/characters/";
   const [characters, setCharacters] = useState([]);
-  
-    const fetchCharacters = async (name="") => {
-      const res = await axios.get(`${url}/${name}`);
 
-      setCharacters(res.data);
-    };
+  const fetchCharacters = async () => {
+    const res = await axios.get(`${url}`);
 
-useEffect(() => {
+    setCharacters(res.data);
+  };
+
+  const searchCharacter = async (name = "") => {
+    // if (!name) {
+    //   return fetchCharacters()
+    // }
+    const res = await axios.get(`${url}${name}`);
+
+    setCharacters([res.data]);
+  };
+
+  useEffect(() => {
     fetchCharacters();
   }, []);
 
@@ -27,17 +34,14 @@ useEffect(() => {
   return (
     <div className="cajaGrande">
       <div>
-      
-        <Search onSubmit={(data)=> fetchCharacters(data.data.name 
-            )}/>
+        <Search onSubmit={(data) => searchCharacter(data.title)} />
       </div>
-     
+
       <div className="timeline-container">
         {characters.map((character) => (
           <CardCharacter key={character.id} character={character} />
         ))}
       </div>
-     
     </div>
   );
 }
