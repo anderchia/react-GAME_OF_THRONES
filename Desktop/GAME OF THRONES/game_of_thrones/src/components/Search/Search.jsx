@@ -1,45 +1,46 @@
-
 import { useForm } from "react-hook-form";
 
+export default function Search({ onSubmit }) {
+  const { register, handleSubmit } = useForm();
 
-
-export default function Search({onSubmit}){
-const {register, handleSubmit} = useForm();
-
-
- return(
-      
-      <form onSubmit={handleSubmit(onSubmit)}>
-       <input {...register("name")} type="text"/>
-      </form>
-
-
-    )
-  
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input {...register("name")} type="text" />
+    </form>
+  );
 }
-    // const [ busqueda, setBusqueda ] = useState("");
-    // const { characters, setCharacters } = useContext(GoTcontext);
-  
-    // const handleChange=e=>{
-    //     setBusqueda(e.target.value);
-    //   filtrar(e.target.value);
-    //   // setCharacters([])
-    //     }
-        
-    // const filtrar = (terminoBusqueda)=>{
-    //  const resultadosBusqueda = characters.filter((character) =>{
-    //     if(character.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
-    //         return character;
-    //     }
-         
-    // })
-    //   setCharacters(resultadosBusqueda)
 
-    // }    
-    // return(
-    //   <>
-    //    <input {...register("name")} type="search" value={busqueda} placeholder="" onChange={handleChange}/>
-    //   </>
-   
+//import useState, { useContext }  from "react";
+// import { GoTcontext } from "../../contexts/GoTcontext";
 
+// export default function Search(){
+//     const [ busqueda, setBusqueda ] = useState("");
+//     const { characters, setCharacters } = useContext(GoTcontext);
 
+//     const handleChange=e=>{
+//       console.log("TARGET",e.target);
+//       setBusqueda(e.target.value);
+//     filtrar(e.target.value);
+
+//       }
+
+//     const filtrar = (terminoBusqueda)=>{
+//      console.log("FILTRO", characters);
+//      let resultadosBusqueda = characters.filter((character) =>{
+//         if(character.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+//             return character;
+//         }
+
+//     })
+//       setCharacters(resultadosBusqueda)
+
+//     }
+//     return(
+//       <div>
+//        <p>HOLA ESTOY PASANDO</p>
+//        <input value={busqueda} placeholder="...buscar" onChange={handleChange}/>
+//       </div>
+
+//     )
+
+// }
