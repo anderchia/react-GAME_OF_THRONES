@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import CardHouseDetails from '../../components/CardHouseDetails/CardHouseDetails';
+import Casa from '../../components/Casa/Casa';
+import GoBack from '../../components/GoBack/GoBack';
 
 
 
@@ -25,7 +27,12 @@ export default function HouseDetails() {
 
 
   return (
-    <CardHouseDetails house={houseDetail}/>
-
+    <div>
+    <GoBack/>
+    <div>
+        <Casa/>
+      </div>
+      <CardHouseDetails house={houseDetail}/>
+</div>
   )}
 

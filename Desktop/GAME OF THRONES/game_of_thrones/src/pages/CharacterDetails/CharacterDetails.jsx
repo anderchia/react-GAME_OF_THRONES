@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import CardCharacterDetails from '../../components/CardCharacterDetails/CardCharacterDetails';
+import Casa from '../../components/Casa/Casa';
+import GoBack from '../../components/GoBack/GoBack';
 
 
 
@@ -25,7 +27,9 @@ export default function CharacterDetails() {
 
 
   return (
-    characterDetail &&<CardCharacterDetails character={characterDetail}/>
-
-
-  )}
+    characterDetail &&  <div>
+    <Casa/>
+    <GoBack/>
+ <CardCharacterDetails character={characterDetail}/>
+ </div>
+)}

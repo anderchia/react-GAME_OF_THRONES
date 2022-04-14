@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Cronology.scss";
 import Cronologyasc from "../../components/Cronologies/Cronologyasc";
+import Casa from "../../components/Casa/Casa";
+
 
 
 export default function Cronology() {
@@ -39,12 +41,17 @@ export default function Cronology() {
   const [showCronology, setShowCronology] = useState(false);
 
   return (
+    <div className="cajaGrande">
     <div>
+        <Casa/>
+      </div>
+     
       <button id="asc" onClick={() => filterChar(characters)}>asc
       </button>
+      <div className="timeline-container">
 
         <Cronologyasc characters={characters} />
-   
+   </div>
     </div>
   );
 }
