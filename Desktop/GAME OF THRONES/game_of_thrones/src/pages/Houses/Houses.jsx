@@ -1,20 +1,19 @@
-import React, {  useState, useEffect } from 'react'
-import CardHouse from '../../components/CardHouse/CardHouse'
-import Search from '../../components/Search/Search'
-import axios from 'axios'
-import Casa from '../../components/Casa/Casa'
+import React, { useState, useEffect } from "react";
+import CardHouse from "../../components/CardHouse/CardHouse";
+import Search from "../../components/Search/Search";
+import axios from "axios";
+import Casa from "../../components/Casa/Casa";
 
 
 export default function Houses() {
-  const [houses, setHouses] = useState([])
+  const [houses, setHouses] = useState([]);
   const url = "https://api.got.show/api/show/houses/";
 
- const fetchHouses = async () => {
-      const res = await axios.get(`${url}`);
+  const fetchHouses = async () => {
+    const res = await axios.get(`${url}`);
 
-      setHouses(res.data);
-    };
-
+    setHouses(res.data);
+  };
 
   const searchHouse = async (name = "") => {
     // if (!name) {
@@ -29,24 +28,20 @@ export default function Houses() {
     fetchHouses();
   }, []);
 
-
-    return (
-      <div className="cajaGrande">
+  return (
+    <div className="cajaGrande">
       <div>
         <Search onSubmit={(data) => searchHouse(data.title)} />
       </div>
       <div>
-        <Casa/>
+        <Casa />
       </div>
-    
+     
       <div className="timeline-container">
-      {houses.map((house) => (
-        <CardHouse key={house.id} house={house}/>
-      ))}
-   </div>
-   </div>
-  )
-      }
-
-
-
+        {houses.map((house) => (
+          <CardHouse key={house.id} house={house} />
+        ))}
+      </div>
+    </div>
+  );
+}

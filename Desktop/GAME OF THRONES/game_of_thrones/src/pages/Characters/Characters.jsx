@@ -7,6 +7,7 @@ import "./Characters.scss";
 import Casa from "../../components/Casa/Casa";
 
 
+
 export default function Characters() {
   // const {characters, setCharacters, fetchCharacters} = useContext(GoTcontext); //traer contexto para que no choque con la búsqueda
   const url = "https://api.got.show/api/show/characters/";
@@ -43,13 +44,13 @@ export default function Characters() {
       <div>
         <Casa/>
       </div>
-      
-
+          
       <div className="timeline-container">
         {characters.map((character) => (
           <CardCharacter key={character.id} character={character} />
         ))}
       </div>
+     
     </div>
   );
 }

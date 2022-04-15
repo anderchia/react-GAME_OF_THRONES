@@ -1,39 +1,29 @@
-
-.cajaGrande{
-
-    width: 90%;
-    margin: 100px;
+.cajaGrande {
+  width: 90%;
+  margin: 100px;
 }
 
-.timeline-container{
-
-    height: 800px;
-    width: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    
+.timeline-container {
+  height: 800px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.timeline-container::-webkit-scrollbar{
-    width: 5px;
-    
+.timeline-container::-webkit-scrollbar {
+  width: 5px;
 }
 
-.timeline-container::-webkit-scrollbar-thumb{
-
- background: rgb(255, 255, 255);
-
-
+.timeline-container::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
 }
 
-.timeline-container::-webkit-scrollbar-track{
-
-    // box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-    background-color: rgb(54, 54, 54);
-    }
+.timeline-container::-webkit-scrollbar-track {
+  // box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+  background-color: rgb(54, 54, 54);
+}

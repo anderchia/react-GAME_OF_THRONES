@@ -26,27 +26,27 @@ export default function CardCharacterDetails({ character }) {
       </figure>
 
       <figure className="b-boxdetail">
-        <div className="b-boxdetaiddetail">
+        <div className="b-boxdetailimage">
           <h3>CASA</h3>
           {house && <img src={house.logoURL} alt="" />}
         </div>
-        <div>
+        <div className="b-boxdetailsmall">
           <h3>ALIANZAS</h3>
           <p className="b-tipo">{character.allegiances}</p>
         </div>
-        <div>
+        <div className="b-boxdetailsmall">
           <h3>APARICIONES</h3>
           <p className="b-tipo">{character.appearances}</p>
         </div>
-        <div>
+        <div className="b-boxdetailsmall">
           <h3>PADRE</h3>
           <p className="b-tipo">{character.father}</p>
         </div>
-        <div>
+        <div className="b-boxdetailsmall">
           <h3>DESCENDIENTES</h3>
           <p className="b-tipo">{character.siblings}</p>
         </div>
-        <div>
+        <div className="b-boxdetailsmall">
           <h3>TÍTULOS</h3>
           <p className="b-tipo">{character.titles}</p>
         </div>

@@ -6,6 +6,7 @@ import Casa from "../../components/Casa/Casa";
 
 
 
+
 export default function Cronology() {
   const [characters, setCharacters] = useState([]);
 
@@ -46,12 +47,14 @@ export default function Cronology() {
         <Casa/>
       </div>
      
+          
       <button id="asc" onClick={() => filterChar(characters)}>asc
       </button>
       <div className="timeline-container">
 
         <Cronologyasc characters={characters} />
    </div>
+   
     </div>
   );
 }

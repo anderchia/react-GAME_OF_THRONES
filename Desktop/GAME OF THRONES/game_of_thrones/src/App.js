@@ -12,8 +12,7 @@ import Houses from "./pages/Houses/Houses";
 function App() {
   return (
     <Router>
-      <Navigator />
-
+    <Navigator/>
       <GoTcontextProvider>
         <Routes>
           <Route path="/" element={<Home />} />
