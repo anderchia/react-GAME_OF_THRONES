@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import CardCharacterDetails from "../../components/CardCharacterDetails/CardCharacterDetails";
 import Casa from "../../components/Casa/Casa";
 import GoBack from "../../components/GoBack/GoBack";
+import Traductor from "../../components/Traductor/Traductor";
 
 
 export default function CharacterDetails() {
@@ -26,6 +27,7 @@ export default function CharacterDetails() {
       <div className="cajaGrande">
         <Casa />
         <GoBack />
+        <Traductor/>
      
         <CardCharacterDetails character={characterDetail} />
       </div>

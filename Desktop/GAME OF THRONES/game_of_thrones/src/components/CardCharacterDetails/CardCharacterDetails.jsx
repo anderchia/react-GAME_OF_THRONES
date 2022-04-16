@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import './CardCharacterDetails.scss'
 
 export default function CardCharacterDetails({ character }) {
   const [house, setHouses] = useState({});
+
 
   useEffect(() => {
     axios({
@@ -36,7 +38,7 @@ export default function CardCharacterDetails({ character }) {
         </div>
         <div className="b-boxdetailsmall">
           <h3>APARICIONES</h3>
-          <p className="b-tipo">{character.appearances}</p>
+          <p className="b-tipo timeline-container-small">{character.appearances}</p>
         </div>
         <div className="b-boxdetailsmall">
           <h3>PADRE</h3>
@@ -46,9 +48,9 @@ export default function CardCharacterDetails({ character }) {
           <h3>DESCENDIENTES</h3>
           <p className="b-tipo">{character.siblings}</p>
         </div>
-        <div className="b-boxdetailsmall">
+        <div className="b-boxdetailsmall ">
           <h3>TÍTULOS</h3>
-          <p className="b-tipo">{character.titles}</p>
+          <p className="b-tipo timeline-container-small">{character.titles}</p>
         </div>
       </figure>
     </section>

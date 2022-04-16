@@ -22,7 +22,13 @@ i18n
          description:{
              part1: 'PERSONAJES',
              part2: 'CASAS',
-             part3: 'CRONOLOGÍA'
+             part3: 'CRONOLOGÍA',
+             part4: 'CASA',
+             part5: 'ALIANZAS',
+             part6: 'APARICIONES',
+             part7: 'PADRE',
+             part8: 'DESCENCIENTES',
+             part9: 'TITULOS',
          }
          
         }
@@ -32,7 +38,13 @@ i18n
          description:{
              part1: 'CHARACTERS',
              part2: 'HOUSES',
-             part3: 'CRONOLOGY'
+             part3: 'CRONOLOGY',
+             part4: 'HOUSE',
+             part5: 'ALLEGIANCES',
+             part6: 'APPEARANCES',
+             part7: 'FATHER',
+             part8: 'SIBLINGS',
+             part9: 'TITLES',
          }
 
         }

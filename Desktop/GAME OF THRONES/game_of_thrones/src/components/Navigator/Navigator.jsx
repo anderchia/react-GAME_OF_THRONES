@@ -11,7 +11,7 @@ const lngs = {
 export default function Navigator() {
   const { t, i18n } = useTranslation();
   return (
-    <>  
+    <div className='b-navGeneral'>  
         <div className='b-buttons'>
 
         {/* <Link to="/" className="b-imagenHome"  >
@@ -19,7 +19,7 @@ export default function Navigator() {
         </Link> */}
 
           {Object.keys(lngs).map((lng) => (
-             <button key={lng} className="b-buttonNav" style={{ backgroundImage: "url(/images/"+lng+".jpg)" }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+             <button key={lng} className="b-buttonNav" style={{ backgroundImage: "url(/images/"+lng+".jpg)"}} type="submit" onClick={() => i18n.changeLanguage(lng)}>
               
             </button>
             
@@ -33,7 +33,7 @@ export default function Navigator() {
         {t('description.part2')}</Link> 
         <Link className="underline" to ="/cronology">{t('description.part3')}</Link> 
      </ul>
-   </> 
+   </div> 
   )
 }
 

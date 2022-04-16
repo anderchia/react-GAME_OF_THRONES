@@ -3,6 +3,7 @@ import CardHouse from "../../components/CardHouse/CardHouse";
 import Search from "../../components/Search/Search";
 import axios from "axios";
 import Casa from "../../components/Casa/Casa";
+import Navigator from "../../components/Navigator/Navigator";
 
 
 export default function Houses() {
@@ -35,6 +36,9 @@ export default function Houses() {
       </div>
       <div>
         <Casa />
+      </div>
+      <div>
+        <Navigator />
       </div>
      
       <div className="timeline-container">

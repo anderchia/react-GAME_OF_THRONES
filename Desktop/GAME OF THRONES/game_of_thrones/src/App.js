@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
-import Navigator from "./components/Navigator/Navigator";
+
 import { GoTcontextProvider } from "./contexts/GoTcontext";
 import CharacterDetails from "./pages/CharacterDetails/CharacterDetails";
 import Characters from "./pages/Characters/Characters";
@@ -12,7 +12,7 @@ import Houses from "./pages/Houses/Houses";
 function App() {
   return (
     <Router>
-    <Navigator/>
+    
       <GoTcontextProvider>
         <Routes>
           <Route path="/" element={<Home />} />

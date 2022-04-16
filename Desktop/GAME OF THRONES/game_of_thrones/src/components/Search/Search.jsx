@@ -5,7 +5,8 @@ export default function Search({onSubmit}) {
   const { register, handleSubmit } = useForm();
  
   return (<form onSubmit={handleSubmit(onSubmit)}>
-      <input className="buscador" {...register("title")} type="text" placeholder="🔎 Buscar..."/>
+      <img className="searchIcon" src="/images/lupa.png" alt="searchIcon"/>
+      <input className="buscador" {...register("title")} type="text" placeholder="      Buscar..."/>
     </form>
   );
 }

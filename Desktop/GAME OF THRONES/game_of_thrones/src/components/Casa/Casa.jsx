@@ -6,7 +6,7 @@ export default function Casa() {
   return (
       <div className='homeIcon'>
     <Link to="/" className="b-imagenHome"  >
-        <img  src="/images/house.jpg" alt=""></img>
+        <img  src="/images/house.png" alt=""></img>
         </Link>
         </div>
   )
