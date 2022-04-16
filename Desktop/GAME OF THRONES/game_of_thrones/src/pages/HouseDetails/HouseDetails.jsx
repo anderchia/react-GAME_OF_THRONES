@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import CardHouseDetails from "../../components/CardHouseDetails/CardHouseDetails";
 import Casa from "../../components/Casa/Casa";
 import GoBack from "../../components/GoBack/GoBack";
+import Traductor from "../../components/Traductor/Traductor";
 
 
 export default function HouseDetails() {
@@ -22,10 +23,13 @@ export default function HouseDetails() {
   }, [name]);
 
   return (
-    <div>
+    <div className="cajaGrande">
       <GoBack />
       <div>
         <Casa />
+      </div>
+      <div>
+        <Traductor />
       </div>
      
       <CardHouseDetails house={houseDetail} />

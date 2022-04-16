@@ -5,6 +5,7 @@ import Search from "../../components/Search/Search";
 import axios from "axios";
 import "./Characters.scss";
 import Casa from "../../components/Casa/Casa";
+import Navigator from "../../components/Navigator/Navigator";
 
 
 
@@ -44,7 +45,9 @@ export default function Characters() {
       <div>
         <Casa/>
       </div>
-          
+      <div>
+      <Navigator/>
+      </div>
       <div className="timeline-container">
         {characters.map((character) => (
           <CardCharacter key={character.id} character={character} />

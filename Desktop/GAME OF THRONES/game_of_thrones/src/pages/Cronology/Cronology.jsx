@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Cronology.scss";
 import Cronologyasc from "../../components/Cronologies/Cronologyasc";
 import Casa from "../../components/Casa/Casa";
+import Navigator from "../../components/Navigator/Navigator";
 
 
 
@@ -45,6 +46,9 @@ export default function Cronology() {
     <div className="cajaGrande">
     <div>
         <Casa/>
+      </div>
+      <div>
+        <Navigator/>
       </div>
      
           

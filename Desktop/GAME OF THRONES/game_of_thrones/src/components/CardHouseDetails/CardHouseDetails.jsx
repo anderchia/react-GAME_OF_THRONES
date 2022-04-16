@@ -3,7 +3,7 @@ import "./CardHouseDetails.scss";
 
 export default function CardHouseDetails({ house }) {
   return (
-    <section>
+    <section className="paginaDetalle">
       <figure>
         <div className="b-detail">
           <img src={house.logoURL} alt="" />
