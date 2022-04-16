@@ -1,7 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./CardHouseDetails.scss";
 
+
 export default function CardHouseDetails({ house }) {
+  const { t, i18n } = useTranslation();
   return (
     <section className="paginaDetalle">
       <figure>
@@ -13,24 +16,24 @@ export default function CardHouseDetails({ house }) {
 
       <figure className="b-boxdetail">
         <div className="b-boxdetaiddetail">
-          <h3>LEMA</h3>
+          <h3>{t('description.part10')}</h3>
           <p className="b-tipo">{house.words}</p>
         </div>
         <div>
-          <h3>SEDE</h3>
+          <h3>{t('description.part11')}</h3>  
           <p className="b-tipo">{house.seat}</p>
         </div>
         <div>
-          <h3>REGION</h3>
+          <h3>{t('description.part12')}</h3>
           <p className="b-tipo">{house.region}</p>
         </div>
         <div>
-          <h3>ALIANZAS</h3>
+          <h3>{t('description.part13')}</h3>
           <p className="b-tipo">{house.allegiance}</p>
       
         </div>
         <div>
-          <h3>FUNDACION</h3>
+          <h3>{t('description.part14')}</h3>
           <p className="b-tipo">{house.createdAt}</p>
         </div>
       </figure>

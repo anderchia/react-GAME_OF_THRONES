@@ -7,7 +7,7 @@ import React from 'react'
   const navigate = useNavigate();
 
   return (
-    <><button className="cajaFlecha" onClick={() => navigate(-1)}><img  className="flecha" src="/images/left-arrow.png" alt=""/>Volver</button></>
+    <><button className="cajaFlecha" onClick={() => navigate(-1)}><img  className="flechaGoBack" src="/images/left-arrow.png" alt=""/>Volver</button></>
   );
 }
 

@@ -29,6 +29,11 @@ i18n
              part7: 'PADRE',
              part8: 'DESCENCIENTES',
              part9: 'TITULOS',
+             part10: 'LEMA',
+             part11: 'SEDE',
+             part12: 'REGION',
+             part13: 'ALIANZAS',
+             part14: 'FUNDACION',
          }
          
         }
@@ -45,6 +50,11 @@ i18n
              part7: 'FATHER',
              part8: 'SIBLINGS',
              part9: 'TITLES',
+             part10: 'SIGIL',
+             part11: 'SEAT',
+             part12: 'REGION',
+             part13: 'ALLEGIANCE',
+             part14: 'FUNDATION',
          }
 
         }

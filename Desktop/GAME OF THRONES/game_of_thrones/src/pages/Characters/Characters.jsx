@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CardCharacter from "../../components/CardCharacter/CardCharacter";
-// import { GoTcontext } from "../../contexts/GoTcontext";
+
 import Search from "../../components/Search/Search";
 import axios from "axios";
 import "./Characters.scss";
@@ -10,9 +10,10 @@ import Navigator from "../../components/Navigator/Navigator";
 
 
 export default function Characters() {
-  // const {characters, setCharacters, fetchCharacters} = useContext(GoTcontext); //traer contexto para que no choque con la búsqueda
+ 
   const url = "https://api.got.show/api/show/characters/";
   const [characters, setCharacters] = useState([]);
+
 
   const fetchCharacters = async () => {
     const res = await axios.get(`${url}`);
