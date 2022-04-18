@@ -1,0 +1,32 @@
+.p-background {
+  background-image: url("../../../public/images/imageHome.png");
+  background-size: cover;
+  background-position: center;
+
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.p-homeTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -100px;
+
+  color: white;
+  font-size: 80px;
+}
+
+.p-h1Title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 50%;
+}

@@ -1,0 +1,151 @@
+li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 25px;
+  }
+}
+
+.cajaGrandeCrono {
+  width: 90%;
+  margin: 10px 100px;
+  display: flex;
+  top: 15px;
+}
+
+.timeline-container {
+  height: 800px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.timeline-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.timeline-container::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+}
+
+.timeline-container::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgb(54, 54, 54);
+}
+.b-cronology {
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  color: aliceblue;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: solid 2px white;
+  border-radius: 50%;
+  top: -3rem;
+  left: 4.2%;
+  font-size: 20px;
+}
+.left-box-big {
+  margin-top: 4%;
+  width: 50vw;
+  border-right: 3px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.right-box-big {
+  flex-direction: column;
+  margin-top: 16%;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.left-box-small {
+  margin-right: 0px;
+  font-size: 16px;
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  border-top: solid 2px white;
+  color: white;
+
+  &_img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+  }
+  &_age {
+    font-size: 20px;
+  }
+  p {
+    margin: 5px;
+  }
+}
+
+.right-box-small {
+  font-size: 16px;
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  border-top: solid 2px white;
+  margin-left: 0px;
+  color: white;
+
+  &_img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+  }
+  &_age {
+    font-size: 20px;
+  }
+  p {
+    margin: 5px;
+  }
+}
+
+.c-chrono {
+  margin-top: 80px;
+  height: 75vh;
+  &right {
+    margin-top: 200px;
+  }
+}
+
+.flecha {
+  left: 27px;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  &_reves {
+    left: 27px;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transform: scaleY(-1);
+  }
+}

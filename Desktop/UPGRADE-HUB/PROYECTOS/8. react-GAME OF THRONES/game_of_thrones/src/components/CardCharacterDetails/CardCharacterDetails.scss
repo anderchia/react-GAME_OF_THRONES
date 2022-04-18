@@ -1,0 +1,24 @@
+.timeline-container-small {
+  height: 250px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.timeline-container-small::-webkit-scrollbar {
+  width: 5px;
+}
+
+.timeline-container-small::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+}
+
+.timeline-container-small::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgb(54, 54, 54);
+}
